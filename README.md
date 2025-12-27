@@ -69,3 +69,6 @@ paragraphs = text_2_paragraphs(plain_text)
 
 
 
+# LICENSE
+
+MIT license 
