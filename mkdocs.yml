@@ -1,0 +1,119 @@
+site_name: synthetic_paragraph_classifier
+site_description: Documentation for the synthetic_paragraph_classifier Python package
+site_author: Dinga Wonanke
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.top
+    - search.highlight
+    - search.suggestions
+    - content.code.annotate
+    - content.code.copy
+    - content.code.folding
+    - content.tabs.links
+    - toc.integrated
+    - navigation.sections
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+markdown_extensions:
+  - admonition
+  - codehilite
+  - toc: true
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.keys
+  - pymdownx.critic
+  - pymdownx.mark
+  - pymdownx.tasklist
+  - pymdownx.emoji: true
+nav:
+  - Home: index.md
+  - Installation: installation.md
+  - Usage:
+      - Data processing:
+          - Data processing:
+            - HTML to paragraphs: text_to_paragraphs.md
+
+  - API Reference:
+      - doc_parser: synthetic_paragraph_classifier/doc/doc_parser.md
+      - paragraph_classifier: synthetic_paragraph_classifier/paragraph_classifier/paragraph_classifier.md
+  - Examples: examples.md
+  - Changelog: changelog.md
+  - License: license.md
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          setup_commands:
+            - import sys
+            - import os
+            - sys.path.insert(0, os.path.abspath('.'))
+          options:
+            show_root_full_path: true
+            separate_signature: true
+            docstring_style: google
+            rendering:
+              show_source: true
+              show_root_full_path: true
+              show_module_summary: true
+              show_class_summary: true
+              show_init_summary: true
+              show_method_summary: true
+              show_attribute_summary: true
+              show_dataclass_fields_summary: true
+              show_property_summary: true
+              show_source_code: true
+              show_inherited_members: true
+              show_private_members: false
+              show_special_members: false
+              show_undocumented_members: false
+              show_bases: true
+              show_module_members: true
+              show_class_members: true
+              show_methods: true
+              show_attributes: true
+              show_properties: true
+              show_dataclass_fields: true
+              show_index: true
+              merge_init_into_class: true
+              heading_level: 2
+              filter_members: []
+              sort_members: alphabetically
+              custom_templates: {}
+              cross_reference: true
+              search: true
+              navigation:
+                prev_next: true
+                toc: true
+                sections: true
+              code_blocks:
+                fold: false
+                copy: true
+                annotate: true
+                highlight: true
+              tabs:
+                links: true
+              toc:
+                integrated: true
+              extra: {}
+

@@ -1,0 +1,10 @@
+.history
+*__pycache__
+*.pyc
+.env
+.vscode
+.DS_Store
+.idea
+.pytest_cache
+.pyenv
+poetry.lock
